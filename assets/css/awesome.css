@@ -1,0 +1,232 @@
+/* 
+	================================
+	 Variables
+	================================
+*/
+/*Color code*/
+html,
+body {
+  margin: 0 auto;
+  padding: 0;
+  color: #323c46;
+  font-family: "Microsoft Yahei",STXihei,"Source Sans Pro",sans-serif !important;
+  min-width: 320px !important; }
+
+/* 
+	================================
+	 Header-Nav
+	================================
+*/
+.navbar-default .navbar-nav > li > a {
+  color: #24a560; }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #005e37; }
+
+.awesome-nav {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+  margin-bottom: 0px;
+  background-color: #fff; }
+  .awesome-nav .site-logo a {
+    height: 100%;
+    padding: 6px 24px;
+    transition: all 0.5 ease; }
+    .awesome-nav .site-logo a:hover {
+      opacity: 0.65; }
+    .awesome-nav .site-logo a img {
+      height: 60px; }
+  .awesome-nav ul > li > a {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    font-size: 20px;
+    transition: all 0.4s ease; }
+    .awesome-nav ul > li > a:hover {
+      background-color: #EEEEF2 !important; }
+  @media (max-width: 767px) {
+    .awesome-nav {
+      text-align: center;
+      box-shadow: none; }
+      .awesome-nav ul {
+        padding: 0;
+        margin: 0 -15px;
+        background-color: aliceblue; }
+        .awesome-nav ul li a:hover {
+          background-color: #323c46; }
+      .awesome-nav .site-logo {
+        text-align: center;
+        height: 100%; }
+        .awesome-nav .site-logo a {
+          height: 100%;
+          width: 100%; }
+          .awesome-nav .site-logo a img {
+            display: inline-block; }
+      .awesome-nav .navbar-header button {
+        width: 100%; }
+        .awesome-nav .navbar-header button.navbar-toggle {
+          margin-right: 0;
+          margin: 0;
+          float: none;
+          border-radius: 0;
+          border: none;
+          padding-top: 0;
+          transition: all 0.5s ease; }
+          .awesome-nav .navbar-header button.navbar-toggle:hover, .awesome-nav .navbar-header button.navbar-toggle:focus, .awesome-nav .navbar-header button.navbar-toggle:active, .awesome-nav .navbar-header button.navbar-toggle:visited {
+            background-color: transparent;
+            opacity: 0.65; }
+        .awesome-nav .navbar-header button span.icon-bar {
+          width: 30px;
+          display: inline-block; } }
+
+.header-image {
+  height: 626px;
+  background-position: center center;
+  background-size: cover; }
+
+/* 
+	================================
+	 Content front page
+	================================
+*/
+#content {
+  overflow: hidden; }
+
+section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: block; }
+
+#tb-resume-intro h2 {
+  color: #24a560; }
+
+#tb-resume-feature-1 {
+  background-color: #EEEEF2;
+  padding-bottom: 40px;
+  padding-top: 20px; }
+  #tb-resume-feature-1 h2 {
+    color: #24a560;
+    font-size: 36px;
+    padding-bottom: 20px; }
+  #tb-resume-feature-1 .awesome-feature-block {
+    padding-bottom: 30px; }
+
+#tb-resume-template h2 {
+  padding-bottom: 20px; }
+#tb-resume-template .awesome-resume-preview {
+  box-shadow: 0px 2px 9.4px 0.6px rgba(0, 0, 0, 0.47);
+  margin-bottom: 20px; }
+#tb-resume-template .awesome-load-more {
+  padding-top: 30px;
+  padding-bottom: 20px; }
+  #tb-resume-template .awesome-load-more button {
+    padding: 15px 70px;
+    font-size: 32px;
+    letter-spacing: 0.2em; }
+    #tb-resume-template .awesome-load-more button.awesome-btn {
+      background-color: #24a560;
+      border: 2px solid #24a560;
+      color: #fff;
+      transition: all 0.5s ease; }
+    #tb-resume-template .awesome-load-more button:hover, #tb-resume-template .awesome-load-more button:active, #tb-resume-template .awesome-load-more button:visited, #tb-resume-template .awesome-load-more button:focus {
+      background-color: transparent;
+      color: #24a560;
+      border: 2px solid #24a560;
+      outline: none;
+      outline-offset: 0; }
+
+#tb-resume-howto {
+  background-color: #3eb866;
+  color: #EEEEF2; }
+  #tb-resume-howto h2 {
+    color: #fff; }
+
+/* 
+	================================
+	 Single-resume
+	================================
+*/
+#resume-order {
+  overflow: hidden; }
+
+#awesome-order-preview {
+  background-color: #24a560; }
+  #awesome-order-preview p {
+    font-size: 16px;
+    letter-spacing: 0.05px;
+    text-indent: 2em;
+    line-height: 1.5em;
+    color: #EEEEF2;
+    padding: 12px 0; }
+  #awesome-order-preview h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff;
+    letter-spacing: 0.2em; }
+    #awesome-order-preview h3 small {
+      color: #EEEEF2; }
+  #awesome-order-preview span {
+    font-size: 42px;
+    font-weight: 700;
+    color: cornsilk; }
+
+#awesome-order-action {
+  background-color: #24a560;
+  padding: 100px 0; }
+  #awesome-order-action h2 {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    color: #fff;
+    padding-bottom: 30px;
+    line-height: 1.5em; }
+  #awesome-order-action a {
+    padding: 20px 50px;
+    font-size: 18px;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: all 0.5s ease; }
+    #awesome-order-action a:hover {
+      background-color: #fff;
+      color: #24a560; }
+
+#awesome-order-designers {
+  padding: 60px 0; }
+  #awesome-order-designers .awesome-designer {
+    padding: 60px 0; }
+  #awesome-order-designers .awesome-designer-background {
+    border-left: 1px solid #24a560;
+    border-right: 1px solid #24a560; }
+    @media (max-width: 767px) {
+      #awesome-order-designers .awesome-designer-background {
+        border: none; } }
+
+#awesome-order-form {
+  background-color: #EEEEF2;
+  padding-top: 0;
+  padding-bottom: 0; }
+
+/* 
+	================================
+	 Footer
+	================================
+*/
+footer {
+  margin-top: 3px;
+  border-top: solid 1px #c7c9c8;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+  z-index: 155; }
+  footer h3 {
+    color: #24a560;
+    padding-left: 15px; }
+  footer .awesome-footer {
+    background-color: transparent; }
+  footer address {
+    padding-left: 15px; }
+  footer .awesome-socail {
+    padding-left: 15px; }
+
+/* 
+	================================
+	 Media Query
+	================================
+*/
+
+/*# sourceMappingURL=awesome.css.map */
