@@ -9,7 +9,7 @@
 */
 
 /*=============================================
-   incs
+   includes
  * ============================================
  */
 require_once get_template_directory().'/incs/admin/custom-post-type.php';

@@ -10,7 +10,10 @@
 ?>
 <?php get_header(); ?>
 <div class="header-image" style="background-image: url('<?php header_image(); ?>');">
-<!-- 			<h1 class="text-center">在线简历，再也不求人！</h1> -->
+    <div class="hero">
+        <h1>在线简历，再也不求人！</h1> 
+        <p class="lead">My resume, my own way</p>
+    </div>
 </div>
 <div id="content">
     <?php if(  have_posts()): ?>

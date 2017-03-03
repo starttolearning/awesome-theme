@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
-    browserify = require('gulp-browserify'),
     compass = require('gulp-compass'),
     connect = require('gulp-connect'),
     gulpif = require('gulp-if'),
@@ -52,7 +51,7 @@ gulp.task('compass', function() {
 
 gulp.task('watch', function() {
   gulp.watch(jsSources, ['js']);
-  gulp.watch('components/sass/*.scss', ['compass']);
+  gulp.watch('_/sass/*.scss', ['compass']);
 //  gulp.watch('builds/development/*.html', ['html']);
 });
 

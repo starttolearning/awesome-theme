@@ -109,15 +109,12 @@ get_header();
 
     
 <section id="awesome-order-form">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7">
-                <h2 class="form-heading2">填写你的简历需要呈现的信息</h2>
-                <p class="lead">通过使用我们提供给大家的简单模板，按照要求填写简历的详细内容（研究表明：详细和结构化的建立更能帮助求职者），然后通过提交该文档由我们的设计师完成排版和设计。</p>
-                <?php echo do_shortcode( '[order]', false ); ?>
-            </div>
-            <div class="col-md-5">
-                <img class="img-responsive center-block" src="<?php echo get_theme_file_uri(); ?>/images/service.png" alt="Generic placeholder image">
+    <div class="background-filter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <?php echo do_shortcode( '[order]', false ); ?>
+                </div>
             </div>
         </div>
     </div>

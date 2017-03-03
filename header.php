@@ -28,14 +28,12 @@
 
 <body <?php body_class( $awesome_classes ); ?>>
 	<header>
-		<nav class="navbar navbar-default awesome-nav">
+		<nav class="navbar navbar-default">
 		  <div class="container">
-              <div class="site-logo">
-                  <a class="navbar-brand" href="<?php bloginfo( 'url' ); ?>">
-                      <img class="img-responsive" src="<?php echo get_template_directory_uri().'/assets/images/logo.png' ?>" alt="brand-logo">
-                  </a>
-              </div>
               <!-- Brand and toggle get grouped for better mobile display -->
+              <a class="navbar-brand" href="<?php bloginfo( 'url' ); ?>">
+                  <img src="<?php echo get_template_directory_uri().'/assets/images/logo.png' ?>" alt="brand-logo">
+              </a>
               <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                       <span class="sr-only">Toggle navigation</span>

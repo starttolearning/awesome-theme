@@ -9,11 +9,11 @@
 
 ?>
 	<footer>
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-4">
 				    <h3>快速链接</h3>
-					<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'breadcrumb awesome-footer') ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'footer-nav') ); ?>
 				</div>
 				<div class="col-xs-12 col-sm-4">
 				    <h3>联系我们</h3>

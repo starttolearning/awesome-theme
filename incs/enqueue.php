@@ -6,8 +6,7 @@
 */
 function awesome_scripts_enqueue(){
 
-    wp_enqueue_style( 'bootstrap', get_template_directory_uri().'/assets/css/bootstrap.min.css', array(  ), '3.3.7', 'all' );
-    wp_enqueue_style( 'awesomestyle', get_template_directory_uri().'/assets/css/awesome.css', array( 'bootstrap' ), '1.0.0', 'all' );
+    wp_enqueue_style( 'awesomestyle', get_template_directory_uri().'/assets/css/style.css', array(), '1.0.0', 'all' );
 
     wp_enqueue_media();
 

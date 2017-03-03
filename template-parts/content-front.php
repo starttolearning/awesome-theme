@@ -1,9 +1,9 @@
-<section id="tb-resume-intro">
+<section id="home-a">
    <div class="container">
         <div class="row">
-            <div class="col-sm-6"><img class="img-responsive" src="<?php echo the_post_thumbnail_url( 'post-thumbnail' ); ?>" /></div>
+            <div class="col-sm-8"><img src="<?php echo the_post_thumbnail_url( 'post-thumbnail' ); ?>" /></div>
             <!-- col-sm-6 -->
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <h2>制作简历再也不麻烦了</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nostrum corporis reiciendis libero? Itaque obcaecati, reprehenderit illo. Nulla quis laudantium ad dignissimos animi quidem expedita placeat voluptate maxime, repudiandae laborum.</p>
             </div>
@@ -11,29 +11,51 @@
     </div>
 </section>
 
-<section id="tb-resume-feature-1">
-  <div class="container-fluid">
+<section id="home-b">
+  <div class="container">
        <div class="row">
            <h2 class="text-center">我们的优势和特点</h2>
-            <div class="container">
-                <div class="col-sm-2 col-xs-4 awesome-feature-block"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/images/simple.png" /></div>
-                <div class="col-sm-2 col-xs-4 awesome-feature-block"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/images/fast.png" /></div>
-                <div class="col-sm-2 col-xs-4 awesome-feature-block"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/images/professional.png" /></div>
-                <div class="col-sm-2 col-xs-4 awesome-feature-block"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/images/cheap.png" /></div>
-                <div class="col-sm-2 col-xs-4 awesome-feature-block"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/images/beauty.png" /></div>
-                <div class="col-sm-2 col-xs-4 awesome-feature-block"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/images/art.png" /></div>
+           <hr>
+            <div class="col-sm-4 col-md-2">
+                <i class="fa fa-rocket" aria-hidden="true"></i>
+                <h2>快速</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor hic similique molestiae, architecto expedita. Ducimus sapiente, quisquam. Ut excepturi nemo nisi tenetur, cupiditate at inventore, itaque voluptas aliquam, nihil vel.</p>
+            </div>
+            <div class="col-sm-4 col-md-2">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                <h2>简单</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor hic similique molestiae, architecto expedita. Ducimus sapiente, quisquam. Ut excepturi nemo nisi tenetur, cupiditate at inventore, itaque voluptas aliquam, nihil vel.</p>
+            </div>
+            <div class="col-sm-4 col-md-2">
+                <i class="fa fa-certificate" aria-hidden="true"></i>
+                <h2>专业</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor hic similique molestiae, architecto expedita. Ducimus sapiente, quisquam. Ut excepturi nemo nisi tenetur, cupiditate at inventore, itaque voluptas aliquam, nihil vel.</p>
+            </div>
+            <div class="col-sm-4 col-md-2">
+                <i class="fa fa-usd" aria-hidden="true"></i>
+                <h2>便宜</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor hic similique molestiae, architecto expedita. Ducimus sapiente, quisquam. Ut excepturi nemo nisi tenetur, cupiditate at inventore, itaque voluptas aliquam, nihil vel.</p>
+            </div>
+            <div class="col-sm-4 col-md-2">
+                <i class="fa fa-users" aria-hidden="true"></i>
+                <h2>定制</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor hic similique molestiae, architecto expedita. Ducimus sapiente, quisquam. Ut excepturi nemo nisi tenetur, cupiditate at inventore, itaque voluptas aliquam, nihil vel.</p>
+            </div>
+            <div class="col-sm-4 col-md-2">
+                <i class="fa fa-universal-access" aria-hidden="true"></i>
+                <h2>大方</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor hic similique molestiae, architecto expedita. Ducimus sapiente, quisquam. Ut excepturi nemo nisi tenetur, cupiditate at inventore, itaque voluptas aliquam, nihil vel.</p>
             </div>
         </div>
     </div>
 </section>
 
 
-<section id="tb-resume-template">
+<section id="home-c">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 text-center">
-                <h2 class="">选择模板,开始制定</h2>
-            </div>
+            <h2 class="text-center">选择模板,开始制定</h2>
+            <hr>
             <?php
             $args = array(
                 'post_type' => array('resume'),
@@ -44,30 +66,29 @@
             if ($resume_templates->have_posts()):
                 while ($resume_templates->have_posts()):
                     $resume_templates->the_post();
-                    get_template_part('templates/content', 'resume-template');
+                    get_template_part('template-parts/content', 'resume-template');
                 endwhile;
             endif;
             ?>
             <div class="col-xs-12 text-center">
-               <div class="awesome-load-more">
-                    <a  href="./resumes"><button class="btn awesome-btn">更多&raquo;</button></a>
-               </div>
+                <a  href="./resumes"><button class="btn btn-primary btn-lg">更多&raquo;</button></a>
             </div>
         </div>
     </div>
 </section> <!-- #tb-resume-template -->
 
-<section id="tb-resume-howto">
-     <div class="container-fulid">
+<section id="home-d">
+     <div class="container">
          <div class="row">
            <div class="container">
-               <div class="col-sm-6">
+                <div class="call-action">
                     <h2>轻松三个步骤解决你所有的简历问题</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nostrum corporis reiciendis libero? Itaque obcaecati, reprehenderit illo. Nulla quis laudantium ad dignissimos animi quidem expedita placeat voluptate maxime, repudiandae laborum.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nostrum corporis reiciendis libero? Itaque obcaecati, reprehenderit illo. Nulla quis laudantium ad dignissimos animi quidem expedita placeat voluptate maxime, repudiandae laborum.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nostrum corporis reiciendis libero? Itaque obcaecati, reprehenderit illo. Nulla quis laudantium ad dignissimos animi quidem expedita placeat voluptate maxime, repudiandae laborum.</p>
+                    <br>
+                    <a href="#" class="btn btn-primary">选择模板开始</a>
                 </div>
-                <div class="col-sm-6"><img class="img-responsive" src="<?php echo get_template_directory_uri().'/assets/images/howto.png'; ?>" /></div>    
            </div>
         </div>
      </div>

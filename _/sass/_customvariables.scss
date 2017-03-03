@@ -3,6 +3,12 @@ $bootstrap-sass-asset-helper: false !default;
 // Variables
 // --------------------------------------------------
 
+// == custome
+$awesome-main-color:#3eb866;
+$awesome_dark_blue:#323c46;
+$awesome_color_brand:#24a560;
+$awesome_color_grey:#EEEEF2;
+$awesome_color_hover:#005e37;
 
 //== Colors
 //
@@ -49,7 +55,7 @@ $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
-$font-size-base:          14px !default;
+$font-size-base:          16px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
@@ -154,8 +160,8 @@ $btn-default-bg:                 #fff !default;
 $btn-default-border:             #ccc !default;
 
 $btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+$btn-primary-bg:                 lighten($awesome-main-color, 5) !default;
+$btn-primary-border:             #fff !default;
 
 $btn-success-color:              #fff !default;
 $btn-success-bg:                 $brand-success !default;
@@ -362,7 +368,7 @@ $container-lg:                 $container-large-desktop !default;
 //##
 
 // Basics of a navbar
-$navbar-height:                    50px !default;
+$navbar-height:                    70px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
@@ -370,14 +376,14 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             #777 !default;
-$navbar-default-bg:                #f8f8f8 !default;
+$navbar-default-bg:                #fff !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-default-link-color:                #777 !default;
-$navbar-default-link-hover-color:          #333 !default;
-$navbar-default-link-hover-bg:             transparent !default;
-$navbar-default-link-active-color:         #555 !default;
+$navbar-default-link-color:                $awesome_color_hover !default;
+$navbar-default-link-hover-color:          lighten(  $awesome_color_hover, 20 ) !default;
+$navbar-default-link-hover-bg:             darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-active-color:         $awesome_color_hover !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;
 $navbar-default-link-disabled-bg:          transparent !default;
@@ -389,8 +395,8 @@ $navbar-default-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
 $navbar-default-toggle-hover-bg:           #ddd !default;
-$navbar-default-toggle-icon-bar-bg:        #888 !default;
-$navbar-default-toggle-border-color:       #ddd !default;
+$navbar-default-toggle-icon-bar-bg:        $awesome-main-color !default;
+$navbar-default-toggle-border-color:       $awesome-main-color !default;
 
 
 //=== Inverted navbar
