@@ -15,7 +15,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="name">邮箱地址</label>
             <div class="col-sm-10">
-                <input type="email" placeholder="Your Email" id="email" name="email" class="form-control">
+                <input type="email" placeholder="邮箱地址" id="email" name="email" class="form-control">
                 <span id="helpBlock2" class="help-block">你的填写有误</span>
             </div>
         </div>
@@ -23,7 +23,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="name">信息</label>
             <div class="col-sm-10">
-                <textarea placeholder="Your Message" id="message" name="message" class="form-control"></textarea>
+                <textarea placeholder="告诉我们你的想法..." id="message" name="message" class="form-control"></textarea>
                 <span id="helpBlock2" class="help-block">你的填写有误</span>
             </div>
         </div>
