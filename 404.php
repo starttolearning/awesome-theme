@@ -9,23 +9,11 @@
 
 get_header(); ?>
 
-    <div id="primary" class="content-area">
-        <div id="content" class="site-content" role="main">
-
-            <header class="page-header">
-                <h1 class="page-title"><?php _e( 'Not Found', 'twentythirteen' ); ?></h1>
-            </header>
-
-            <div class="page-wrapper">
-                <div class="page-content">
-                    <h2><?php _e( 'This is somewhat embarrassing, isn’t it?', 'twentythirteen' ); ?></h2>
-                    <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentythirteen' ); ?></p>
-
-                    <?php get_search_form(); ?>
-                </div><!-- .page-content -->
-            </div><!-- .page-wrapper -->
-
-        </div><!-- #content -->
-    </div><!-- #primary -->
+    <div class="dev-header-image">
+        <div class="hero">
+            <h1>找不到你咨询的页面</h1>
+            <p class="lead">对不起，你查找的内容我们无法为你找到，请查看一下链接：</p>
+        </div>
+    </div>
 
 <?php get_footer(); ?>

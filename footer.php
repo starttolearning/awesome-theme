@@ -30,16 +30,16 @@
 				        <table class="table table-condensed table-hover">
                          <tbody>
                              <tr>
-                              <td>QQ</td>
-                              <td>7479344433</td>
+                              <td><i class="fa fa-qq" aria-hidden="true"></i></td>
+                              <td>QQ： 7479344433</td>
                               </tr>
                               <tr>
-                                  <td>微信</td>
-                                  <td>7479344433</td>
+                                  <td><i class="fa fa-weixin" aria-hidden="true"></i></td>
+                                  <td>微信：7479344433</td>
                               </tr>
                               <tr>
-                                  <td>新浪</td>
-                                  <td>7479344433</td>
+                                  <td><i class="fa fa-weibo" aria-hidden="true"></i></td>
+                                  <td>新浪：7479344433</td>
                               </tr>
                          </tbody>
                     </table>

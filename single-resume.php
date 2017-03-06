@@ -84,7 +84,7 @@ get_header();
                     <img class="img-circle" src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.jpg" alt="Generic placeholder image" width="140" height="140">
                     <h2>于淑慧</h2>
                     <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                    <p><a class="btn btn-default" href="#" role="button">联系我们的设计师 &raquo;</a></p>
+                    <p><script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDEwODUwOV80NTg4MzFfODAwMTA4NTA5Xw"></script></p>
                 </div>
             </div><!-- /.col-xs-12  col-sm-4 -->
             <div class="col-xs-12  col-sm-4">
@@ -92,7 +92,7 @@ get_header();
                     <img class="img-circle" src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.jpg" alt="Generic placeholder image" width="140" height="140">
                     <h2>张小东</h2>
                     <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                    <p><a class="btn btn-default" href="#" role="button">联系我们的设计师 &raquo;</a></p>
+                    <p><script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDEwODUwOV80NTg4MzFfODAwMTA4NTA5Xw"></script></p>
                 </div>
             </div><!-- /.col-xs-12  col-sm-4 -->
             <div class="col-xs-12  col-sm-4">
@@ -100,7 +100,7 @@ get_header();
                     <img class="img-circle" src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.jpg" alt="Generic placeholder image" width="140" height="140">
                     <h2>李小</h2>
                     <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                    <p><a class="btn btn-default" href="#" role="button">联系我们的设计师 &raquo;</a></p>
+                    <p><script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDEwODUwOV80NTg4MzFfODAwMTA4NTA5Xw"></script></p>
                 </div>
             </div><!-- /.col-xs-12  col-sm-4 -->
         </div>

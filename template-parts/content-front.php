@@ -71,7 +71,7 @@
             endif;
             ?>
             <div class="col-xs-12 text-center">
-                <a  href="./resumes"><button class="btn btn-primary btn-lg">更多&raquo;</button></a>
+                <a  href="./resume"><button class="btn btn-primary btn-lg">更多&raquo;</button></a>
             </div>
         </div>
     </div>

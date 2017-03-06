@@ -29,7 +29,7 @@ function tbc_cpt_resume() {
         'public' => true,
         'show_in_menu'  => true,
         'show_in_nav_menus' => true,
-        'supports' => array('title', 'editor', 'thumbnail', 'excerpt','post-formats'),
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'author'),
         'has_archive' => true,
         'query_var' => true,
         'menu_icon' => 'dashicons-welcome-write-blog',
