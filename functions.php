@@ -12,6 +12,7 @@
    includes
  * ============================================
  */
+require_once get_template_directory().'/incs/menu.php';
 require_once get_template_directory().'/incs/admin/custom-post-type.php';
 require_once get_template_directory().'/incs/admin/taxonomy.php';
 require_once get_template_directory().'/incs/admin/shortcodes.php';

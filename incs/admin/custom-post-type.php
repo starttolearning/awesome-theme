@@ -12,29 +12,28 @@
 function tbc_cpt_resume() {
     register_post_type('resume', array(
         'labels' => array(
-            'name' => __('简历模板', 'ts_child'),
-            'singular_name' => __('简历模板', 'ts_child'),
-            'all_items' => __('所有简历', 'ts_child'),
-            'new_item' => __('新建简历模板', 'ts_child'),
-            'add_new' => __('添加模板', 'ts_child'),
-            'add_new_item' => __('添加简历', 'ts_child'),
-            'edit_item' => __('编辑简历', 'ts_child'),
-            'view_item' => __('查看简历', 'ts_child'),
-            'search_items' => __('搜索简历', 'ts_child'),
-            'not_found' => __('简历没查到', 'ts_child'),
-            'not_found_in_trash' => __('回收站没有简历', 'ts_child'),
-            'parent_item_colon' => __('父简历', 'ts_child'),
-            'menu_name' => __('简历模板', 'ts_child'),
+            'name' => __('简历模板', 'awesome'),
+            'singular_name' => __('简历模板', 'awesome'),
+            'all_items' => __('所有模板', 'awesome'),
+            'new_item' => __('新建简历模板', 'awesome'),
+            'add_new' => __('添加模板', 'awesome'),
+            'add_new_item' => __('添加简历', 'awesome'),
+            'edit_item' => __('编辑简历', 'awesome'),
+            'view_item' => __('查看简历', 'awesome'),
+            'search_items' => __('搜索简历', 'awesome'),
+            'not_found' => __('简历没查到', 'awesome'),
+            'not_found_in_trash' => __('回收站没有简历', 'awesome'),
+            'parent_item_colon' => __('父简历', 'awesome'),
+            'menu_name' => __('种树人', 'awesome'),
         ),
         'public' => true,
-        'hierarchical' => false,
-        'show_ui' => true,
+        'show_in_menu'  => true,
         'show_in_nav_menus' => true,
         'supports' => array('title', 'editor', 'thumbnail', 'excerpt','post-formats'),
         'has_archive' => true,
         'query_var' => true,
         'menu_icon' => 'dashicons-welcome-write-blog',
-        'menu_position' => 4,
+        'menu_position'     => 3,
         'show_in_rest' => true,
         'rest_base' => 'resume',
         'rest_controller_class' => 'WP_REST_Posts_Controller',
@@ -48,7 +47,7 @@ add_action('init', 'tbc_cpt_resume');
  * 添加简历模板属性
  */
 function tb_mata_box_settings() {
-    add_meta_box('tb_resume_meta_box', __('填写简历属性', 'ts_child'), 'tb_resume_properties', 'resume', 'side');
+    add_meta_box('tb_resume_meta_box', __('填写简历属性', 'awesome'), 'tb_resume_properties', 'resume', 'side');
 }
 
 add_action('add_meta_boxes', 'tb_mata_box_settings');
@@ -161,19 +160,19 @@ function tb_cpt_updated_messages($messages) {
 
     $messages['resume'] = array(
         0 => '', // Unused. Messages start at index 1.
-        1 => sprintf(__('简历已更新. <a target="_blank" href="%s">查看简历</a>', 'ts_child'), esc_url($permalink)),
-        2 => __('自定义数据已更新.', 'ts_child'),
-        3 => __('自定义数据已删除.', 'ts_child'),
-        4 => __('简历已更新.', 'ts_child'),
+        1 => sprintf(__('简历已更新. <a target="_blank" href="%s">查看简历</a>', 'awesome'), esc_url($permalink)),
+        2 => __('自定义数据已更新.', 'awesome'),
+        3 => __('自定义数据已删除.', 'awesome'),
+        4 => __('简历已更新.', 'awesome'),
         /* translators: %s: date and time of the revision */
-        5 => isset($_GET['revision']) ? sprintf(__('改简历模板回复至 %s', 'ts_child'), wp_post_revision_title((int) $_GET['revision'], false)) : false,
-        6 => sprintf(__('简历模板已发布. <a href="%s">浏览模板</a>', 'ts_child'), esc_url($permalink)),
-        7 => __('简历模板已保存.', 'ts_child'),
-        8 => sprintf(__('简历模板已提交. <a target="_blank" href="%s">预览简历模板</a>', 'ts_child'), esc_url(add_query_arg('preview', 'true', $permalink))),
-        9 => sprintf(__('简历模板计划在: <strong>%1$s</strong>. <a target="_blank" href="%2$s">预览简历模板</a>', 'ts_child'),
+        5 => isset($_GET['revision']) ? sprintf(__('改简历模板回复至 %s', 'awesome'), wp_post_revision_title((int) $_GET['revision'], false)) : false,
+        6 => sprintf(__('简历模板已发布. <a href="%s">浏览模板</a>', 'awesome'), esc_url($permalink)),
+        7 => __('简历模板已保存.', 'awesome'),
+        8 => sprintf(__('简历模板已提交. <a target="_blank" href="%s">预览简历模板</a>', 'awesome'), esc_url(add_query_arg('preview', 'true', $permalink))),
+        9 => sprintf(__('简历模板计划在: <strong>%1$s</strong>. <a target="_blank" href="%2$s">预览简历模板</a>', 'awesome'),
                 // translators: Publish box date format, see http://php.net/date
                 date_i18n(__('M j, Y @ G:i'), strtotime($post->post_date)), esc_url($permalink)),
-        10 => sprintf(__('简历模板草稿已更新. <a target="_blank" href="%s">预览简历模板</a>', 'ts_child'), esc_url(add_query_arg('preview', 'true', $permalink))),
+        10 => sprintf(__('简历模板草稿已更新. <a target="_blank" href="%s">预览简历模板</a>', 'awesome'), esc_url(add_query_arg('preview', 'true', $permalink))),
     );
 
     return $messages;
@@ -189,7 +188,7 @@ add_filter('post_updated_messages', 'tb_cpt_updated_messages');
 function tb_cpt_custom_columns($cols) {
     $cols = array(
         'cb' => '<input type="checkbox" />',
-        'title' => __('Title', 'ts_child'),
+        'title' => __('Title', 'awesome'),
     );
     return $cols;
 }
@@ -215,9 +214,6 @@ function tb_cpt_custom_column_content($column, $post_id) {
  */
 
 
-
-
-
 /* ORDER CPT */
 function tbc_cpt_order(){
     $labels = array(
@@ -229,10 +225,9 @@ function tbc_cpt_order(){
     $args = array(
         'labels'            => $labels,
         'show_ui'           => true,
-        'show_in_menu'      => true,
+        'show_in_menu'      => 'edit.php?post_type=resume',
         'capability_type'   => 'post',
         'hierarchical'      => false,
-        'menu_position'     => 20,
         'supports'          => array('title','editor','author'),
         'menu_icon'         =>'dashicons-email-alt',
         
