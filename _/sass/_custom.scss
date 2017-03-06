@@ -164,8 +164,34 @@ header{
     }
     .container{
         opacity: 1;
-        
+        .list-group{
+            .list-group-item{
+                .list-group-item-text{
+                    color: #fff;
+                }
+                &.active {
+                    background-color: $awesome-main-color;
+                    border-color: $awesome-main-color;
+                }
+                .btn{
+                    padding: 10px 30px;
+                }
+            }
+        }
     }
+}
+.file_button_container,
+.file_button_container input {
+    height: 47px;
+    width: 263px;
+}
+
+.file_button_container {
+    background: transparent url(http://i.stack.imgur.com/BT5AB.png) left top no-repeat;
+}
+
+.file_button_container input {
+    opacity: 0;
 }
 
 /*

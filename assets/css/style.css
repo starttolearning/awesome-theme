@@ -11013,6 +11013,33 @@ header .navbar .navbar-brand img {
   opacity: 1;
 }
 
+#awesome-order-form .container .list-group .list-group-item .list-group-item-text {
+  color: #fff;
+}
+
+#awesome-order-form .container .list-group .list-group-item.active {
+  background-color: #3eb866;
+  border-color: #3eb866;
+}
+
+#awesome-order-form .container .list-group .list-group-item .btn {
+  padding: 10px 30px;
+}
+
+.file_button_container,
+.file_button_container input {
+  height: 47px;
+  width: 263px;
+}
+
+.file_button_container {
+  background: transparent url(http://i.stack.imgur.com/BT5AB.png) left top no-repeat;
+}
+
+.file_button_container input {
+  opacity: 0;
+}
+
 /*
 =================================================
  footer

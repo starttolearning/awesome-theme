@@ -56,6 +56,7 @@ add_action('add_meta_boxes', 'tb_mata_box_settings');
 function tb_resume_properties($post) {
     wp_nonce_field(plugin_basename(__FILE__), 'tb_resume_meta_nonce');
     
+    $resume_id = get_post_meta($post->ID, 'tb_resume_id', true);
     $total_pages = get_post_meta($post->ID, 'tb_resume_total_pages', true);
     $page_size = get_post_meta($post->ID, 'tb_resume_page_size', true);
     $print_style = get_post_meta($post->ID, 'tb_resume_print_style', true);
@@ -64,6 +65,11 @@ function tb_resume_properties($post) {
     $context = get_post_meta($post->ID, 'tb_resume_context', true);
     ?>
 
+    <p>
+        <label for="tb_resume_id">简历ID</label><br/>
+        <input type="text" class="all-options" id="tb_resume_id" name="tb_resume_id" value="<?php echo $resume_id; ?>" />
+        <span class="description">输入本模板的唯一ID标识。</span>
+    </p>
     <p>
         <label for="tb_resume_total_pages">总页数</label><br/>
         <input type="text" class="all-options" id="tb_resume_total_pages" name="tb_resume_total_pages" value="<?php echo $total_pages; ?>" />
@@ -118,6 +124,7 @@ function tb_resume_meta_box_save($post_id) {
         return $post_id;
     }
 
+    $meta_datas['tb_resume_id'] = (isset($_POST['tb_resume_id']) ? $_POST['tb_resume_id'] : '');
     $meta_datas['tb_resume_total_pages'] = (isset($_POST['tb_resume_total_pages']) ? $_POST['tb_resume_total_pages'] : '');
     $meta_datas['tb_resume_page_size'] = (isset($_POST['tb_resume_page_size']) ? $_POST['tb_resume_page_size'] : '');
     $meta_datas['tb_resume_print_style'] = (isset($_POST['tb_resume_print_style']) ? $_POST['tb_resume_print_style'] : '');
@@ -239,7 +246,9 @@ function tb_set_order_columns( $columns){
         'cb' => '<input type="checkbox" />',
         'title'     => '用户名',
         'message'   => '订单内容',
-        'email'     => '邮件地址',
+        'qq'        => '联系QQ',
+//        'email'     => '邮件地址',
+        'resume_id' => '简历ID',
         'date'      => '时间',
     );
     return $new_columns;
@@ -251,9 +260,17 @@ function tb_order_custom_column( $columns, $post_id ){
         case 'message':
             echo get_the_excerpt();
             break;
-        case 'email':
-            $email = get_post_meta($post_id, '_order_email_value_key',true);
-            echo '<a href="mailto:'.$email.'">'.$email.'</a>';
+//        case 'email':
+//            $email = get_post_meta($post_id, '_order_email_value_key',true);
+//            echo '<a href="mailto:'.$email.'">'.$email.'</a>';
+//            break;
+        case 'qq':
+            $qq = get_post_meta($post_id, '_order_qq_value_key',true);
+            echo '<p>'.$qq.'</p>';
+            break;
+        case 'resume_id':
+            $resume_id = get_post_meta($post_id, '_order_id_value_key',true);
+            echo '<p>'.$resume_id.'</p>';
             break;
     }
 }
@@ -262,16 +279,27 @@ add_action('manage_tb-order_posts_custom_column','tb_order_custom_column',10, 2)
 
 /* order META BOX*/
 function tb_order_type_add_meta_box(){
-    add_meta_box('order_type_meta_box', '邮箱地址', 'tb_order_type_meta_email_callback', 'tb-order','side');
+    add_meta_box('order_type_meta_box', '用户订单属性', 'tb_order_type_meta_email_callback', 'tb-order','side');
 }
 
 function tb_order_type_meta_email_callback( $post ){
     wp_nonce_field('tb_order_save_email_data', 'tb_order_email_meta_box_nonce');
     
-    $value = get_post_meta($post->ID, '_order_email_value_key',true);
-    
+    $order_email_value = get_post_meta($post->ID, '_order_email_value_key',true);
+    $order_qq_value = get_post_meta($post->ID, '_order_qq_value_key',true);
+    $order_resume_id = get_post_meta($post->ID, '_order_id_value_key',true);
+
+    // 用户邮箱
     echo '<label for="tb_order_email_filed">用户邮箱地址</label>';
-    echo '<input type="email" id="tb_order_email_filed" name="tb_order_email_filed" value="'. esc_attr( $value).'" class="all-options" > ';
+    echo '<input type="email" id="tb_order_email_filed" name="tb_order_email_filed" value="'. esc_attr( $order_email_value).'" class="all-options" > ';
+
+    // 用户QQ
+    echo '<label for="tb_order_qq_filed">用户QQ</label>';
+    echo '<input type="text" id="tb_order_qq_filed" name="tb_order_qq_filed" value="'. esc_attr( $order_qq_value).'" class="all-options" > ';
+
+    //用户想要的模板ID
+    echo '<label for="tb_order_id_filed">用户想要的模板ID</label>';
+    echo '<input disabled type="text" id="tb_order_id_filed" name="tb_order_id_filed" value="'. esc_attr( $order_resume_id).'" class="all-options" > ';
 }
 add_action('add_meta_boxes','tb_order_type_add_meta_box');
 
@@ -293,10 +321,22 @@ function tb_order_save_email_data( $post_id ){
     if( !isset( $_POST['tb_order_email_filed'])){
         return;
     }
+
+    if( !isset( $_POST['tb_order_qq_filed'])){
+        return;
+    }
+
+    if( !isset( $_POST['tb_order_id_filed'])){
+        return;
+    }
     
     $my_data = sanitize_text_field($_POST['tb_order_email_filed']);
+    $tb_order_qq = sanitize_text_field($_POST['tb_order_qq_filed']);
+    $tb_resume_id = sanitize_text_field($_POST['tb_order_id_filed']);
     
     update_post_meta($post_id, '_order_email_value_key', $my_data);
-    
+    update_post_meta($post_id, '_order_qq_value_key', $tb_order_qq);
+    update_post_meta($post_id, '_order_id_value_key', $tb_resume_id);
+
 }
 add_action('save_post','tb_order_save_email_data');
