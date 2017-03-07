@@ -47,8 +47,7 @@
 				    
 				</div>
 				<div class="col-xs-12">
-					<p class="text-center">© 2016 版权归南充种树人广告公司所有  蜀ICP备:16026179.</p>
-					<p class="text-center">Powered by: WordPress</p>
+					<p class="text-center">&copy; 2016-<?php echo get_the_date('Y'); ?> 版权归南充种树人广告公司所有  蜀ICP备:16026179.</p>
 				</div>
 			</div>
 		</div>

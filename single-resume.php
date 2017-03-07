@@ -79,30 +79,65 @@ get_header();
 <section id="awesome-order-designers">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12  col-sm-4">
-                <div class="text-center awesome-designer">
-                    <img class="img-circle" src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.jpg" alt="Generic placeholder image" width="140" height="140">
-                    <h2>于淑慧</h2>
-                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                    <p><script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDEwODUwOV80NTg4MzFfODAwMTA4NTA5Xw"></script></p>
-                </div>
-            </div><!-- /.col-xs-12  col-sm-4 -->
-            <div class="col-xs-12  col-sm-4">
-                <div class="text-center awesome-designer awesome-designer-background">
-                    <img class="img-circle" src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.jpg" alt="Generic placeholder image" width="140" height="140">
-                    <h2>张小东</h2>
-                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                    <p><script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDEwODUwOV80NTg4MzFfODAwMTA4NTA5Xw"></script></p>
-                </div>
-            </div><!-- /.col-xs-12  col-sm-4 -->
-            <div class="col-xs-12  col-sm-4">
-                <div class="text-center awesome-designer">
-                    <img class="img-circle" src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.jpg" alt="Generic placeholder image" width="140" height="140">
-                    <h2>李小</h2>
-                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                    <p><script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDEwODUwOV80NTg4MzFfODAwMTA4NTA5Xw"></script></p>
-                </div>
-            </div><!-- /.col-xs-12  col-sm-4 -->
+            <?php
+
+            $args = array(
+                'post_type'         => 'designer',
+                'orderby'           => 'rand',
+            );
+
+            $designers = new WP_Query( $args );
+
+            // The Loop
+            if ( $designers->have_posts() ) {
+                while ( $designers->have_posts() ) {
+                    $designers->the_post();
+            ?>
+                    <div class="col-xs-12  col-sm-4">
+                        <div class="text-center awesome-designer">
+                            <img class="img-circle" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Generic placeholder image" width="140" height="140">
+                            <h2><?php the_title(); ?></h2>
+                            <p><?php echo get_post_meta( get_the_ID() , 'tb_designer_desc', true ); ?></p>
+                            <p><script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=<?php echo get_post_meta( get_the_ID() , 'tb_designer_qqkey', true ); ?>"></script></p>
+                        </div>
+                    </div><!-- /.col-xs-12  col-sm-4 -->
+
+            <?php
+                }
+            } else {
+            ?>
+
+                <div class="col-xs-12  col-sm-4">
+                    <div class="text-center awesome-designer">
+                        <img class="img-circle" src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.jpg" alt="Generic placeholder image" width="140" height="140">
+                        <h2>于淑慧</h2>
+                        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                        <p><script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDEwODUwOV80NTg4MzFfODAwMTA4NTA5Xw"></script></p>
+                    </div>
+                </div><!-- /.col-xs-12  col-sm-4 -->
+                <div class="col-xs-12  col-sm-4">
+                    <div class="text-center awesome-designer awesome-designer-background">
+                        <img class="img-circle" src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.jpg" alt="Generic placeholder image" width="140" height="140">
+                        <h2>张小东</h2>
+                        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                        <p><script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDEwODUwOV80NTg4MzFfODAwMTA4NTA5Xw"></script></p>
+                    </div>
+                </div><!-- /.col-xs-12  col-sm-4 -->
+                <div class="col-xs-12  col-sm-4">
+                    <div class="text-center awesome-designer">
+                        <img class="img-circle" src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.jpg" alt="Generic placeholder image" width="140" height="140">
+                        <h2>李小</h2>
+                        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                        <p><script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDEwODUwOV80NTg4MzFfODAwMTA4NTA5Xw"></script></p>
+                    </div>
+                </div><!-- /.col-xs-12  col-sm-4 -->
+
+            <?php
+            }
+            /* Restore original Post Data */
+            wp_reset_postdata();
+
+            ?>
         </div>
     </div>
 </section> <!--#awesome-order-designers-->

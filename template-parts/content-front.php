@@ -69,6 +69,8 @@
                     get_template_part('template-parts/content', 'resume-template');
                 endwhile;
             endif;
+
+            wp_reset_postdata();
             ?>
             <div class="col-xs-12 text-center">
                 <a  href="./resume"><button class="btn btn-primary btn-lg">更多&raquo;</button></a>
