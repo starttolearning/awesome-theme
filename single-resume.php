@@ -23,7 +23,7 @@ get_header();
                     ?>
                 </div>
                 <div class="col-sm-4">
-                    <h3>模板简介:<i><?php the_title(); ?></i></h3>
+                    <h2>模板简介:<i><?php the_title(); ?></i></h2>
                     <?php the_excerpt(); ?>
                     <h3>页数</h3>
                     <span><?php echo get_post_meta(get_the_ID(), 'tb_resume_total_pages',true); ?></span>

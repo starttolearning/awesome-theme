@@ -85,9 +85,9 @@
            <div class="container">
                 <div class="call-action">
                     <h2>轻松三个步骤解决你所有的简历问题</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nostrum corporis reiciendis libero? Itaque obcaecati, reprehenderit illo. Nulla quis laudantium ad dignissimos animi quidem expedita placeat voluptate maxime, repudiandae laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nostrum corporis reiciendis libero? Itaque obcaecati, reprehenderit illo. Nulla quis laudantium ad dignissimos animi quidem expedita placeat voluptate maxime, repudiandae laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nostrum corporis reiciendis libero? Itaque obcaecati, reprehenderit illo. Nulla quis laudantium ad dignissimos animi quidem expedita placeat voluptate maxime, repudiandae laborum.</p>
+                    <p>Lis libero? Itaque obcaecati, reprnimi quidem expedita placeat voluptate maxime, repudiandae laborum.</p>
+                    <p>Lorem ipsciendis lium ad dignissimos animi quidem expedita placeat voluptate maxime, repudiandae laborum.</p>
+                    <p>Lorem ipsum doro? Itaque obcaecati, reprehenderit illo. Nulla quis laimi quidem expedita placeat voluptate maxime, repudiandae laborum.</p>
                     <br>
                     <a href="#" class="btn btn-primary">选择模板开始</a>
                 </div>

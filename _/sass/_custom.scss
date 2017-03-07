@@ -18,7 +18,10 @@ header{
 }
 
 .header-image{
-    height: 600px;
+    @media (min-width: 768px) {
+        height: 600px;
+    }
+    height: 300px;
     width: 100%;
     display: table;
     text-align: center;
@@ -26,13 +29,20 @@ header{
         display: table-cell;
         vertical-align: middle;
         color: #fff;
-        h1{
-            font-size: 62px;
-            font-weight: 100;
+        @media (min-width: 768px) {
+            h1{
+                font-size: 62px;
+                font-weight: 100;
+                p{
+                    text-transform: uppercase;
+                    font-size: 40px;
+                    letter-spacing: 0.2em;
+                }
+            }
         }
         p{
             text-transform: uppercase;
-            font-size: 40px;
+            font-size: 18px;
             letter-spacing: 0.2em;
         }
     }
@@ -85,14 +95,21 @@ header{
             background-color: $awesome-main-color;
             opacity: 0.95;
             padding: 20px 40px;
+            @media (min-width: 768px) {
+                h2{
+                    font-size: 42px;
+                    color: #fff;
+                    line-height: 150%;
+                }
+                p{
+                    line-height: 150%;
+                }
+            }
+
             h2{
-                font-size: 42px;
                 color: #fff;
-                line-height: 150%;
             }
-            p{
-                line-height: 150%;
-            }
+
             a{
                 margin-bottom: 10px;
             }
@@ -115,6 +132,10 @@ header{
     background-color: $awesome_color_brand;
     hr{
         width: 100%;
+    }
+    h2{
+        color: #fff;
+        font-size: 24px;
     }
     p{ font-size: 16px; letter-spacing: 0.05px; text-indent: 2em; line-height: 1.5em; color: $awesome_color_grey; padding: 12px 0; }
     h3{ margin-top: 0; margin-bottom: 10px; color:#fff; letter-spacing: 0.2em; 
@@ -201,7 +222,7 @@ header{
 */
 
 .post-header-image{
-    height: 300px;
+    height: 200px;
     width: 100%;
     display: table;
     text-align: center;
@@ -209,14 +230,17 @@ header{
         display: table-cell;
         vertical-align: middle;
         color: #fff;
-        h1{
-            font-size: 62px;
-            font-weight: 100;
-        }
-        p{
-            text-transform: uppercase;
-            font-size: 40px;
-            letter-spacing: 0.2em;
+        @media (min-width: 768px) {
+            height: 300px;
+            h1{
+                font-size: 62px;
+                font-weight: 100;
+            }
+            p{
+                text-transform: uppercase;
+                font-size: 40px;
+                letter-spacing: 0.2em;
+            }
         }
     }
 }
@@ -232,7 +256,6 @@ header{
             background-color: lighten($awesome_dark_blue,72) ;
         }
         h2{
-            margin-top: 0;
             letter-spacing: .2em;
             a{
                 text-decoration: none;
@@ -240,6 +263,21 @@ header{
                 &:hover{
                     transition: all 0.2s ease;
                     color: $awesome_color_hover;
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            h2{
+                margin-top: 0;
+                letter-spacing: .2em;
+                a{
+                    text-decoration: none;
+                    color: $awesome_color_brand;
+                    &:hover{
+                        transition: all 0.2s ease;
+                        color: $awesome_color_hover;
+                    }
                 }
             }
         }
